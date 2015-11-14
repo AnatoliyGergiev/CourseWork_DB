@@ -1,0 +1,12 @@
+c:\users\анатолий\documents\visual studio 2013\Projects\Курсовая_БД_ООП\Курсовая_БД_ООП\bin\Debug\Курсовая_БД_ООП.exe.config
+c:\users\анатолий\documents\visual studio 2013\Projects\Курсовая_БД_ООП\Курсовая_БД_ООП\bin\Debug\Курсовая_БД_ООП.exe
+c:\users\анатолий\documents\visual studio 2013\Projects\Курсовая_БД_ООП\Курсовая_БД_ООП\bin\Debug\Курсовая_БД_ООП.pdb
+c:\users\анатолий\documents\visual studio 2013\Projects\Курсовая_БД_ООП\Курсовая_БД_ООП\obj\Debug\Курсовая_БД_ООП.csprojResolveAssemblyReference.cache
+c:\users\анатолий\documents\visual studio 2013\Projects\Курсовая_БД_ООП\Курсовая_БД_ООП\obj\Debug\Курсовая_БД_ООП.Properties.Resources.resources
+c:\users\анатолий\documents\visual studio 2013\Projects\Курсовая_БД_ООП\Курсовая_БД_ООП\obj\Debug\Курсовая_БД_ООП.csproj.GenerateResource.Cache
+c:\users\анатолий\documents\visual studio 2013\Projects\Курсовая_БД_ООП\Курсовая_БД_ООП\obj\Debug\Курсовая_БД_ООП.exe
+c:\users\анатолий\documents\visual studio 2013\Projects\Курсовая_БД_ООП\Курсовая_БД_ООП\obj\Debug\Курсовая_БД_ООП.pdb
+C:\Users\Анатолий\documents\visual studio 2013\Projects\Курсовая_БД_ООП\Курсовая_БД_ООП\obj\Debug\Курсовая_БД_ООП.MainForm.resources
+C:\Users\Анатолий\Documents\GitHub\CourseWork_DB\Курсовая_БД_ООП\Курсовая_БД_ООП\bin\Debug\Курсовая_БД_ООП.exe.config
+C:\Users\Анатолий\Documents\GitHub\CourseWork_DB\Курсовая_БД_ООП\Курсовая_БД_ООП\obj\Debug\Курсовая_БД_ООП.exe
+C:\Users\Анатолий\Documents\GitHub\CourseWork_DB\Курсовая_БД_ООП\Курсовая_БД_ООП\obj\Debug\Курсовая_БД_ООП.pdb
