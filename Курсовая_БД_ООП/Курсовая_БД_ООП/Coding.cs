@@ -8,27 +8,31 @@ namespace Курсовая_БД_ООП
 {
     class Coding
     {
-        //private double Interval_1 
-        //{ 
-        //    get { return Interval; }
-        //    set { Interval = value; }
-        //}
-        //private double Max_1
-        //{
-        //    get { return Max; }
-        //    set { Max = value; }
-        //}
-        //private double Min_1
-        //{
-        //    get { return Min; }
-        //    set { Min = value; }
-        //}
+        public double min { get; set; }
+        public double max { get; set; }
         private double coef { get; set; }
-        public System.Collections.Generic.IEnumerable<double> Code(MainForm.Method mt, double[] list, bool is_coef, double coef)
+        private void ret_sort(double[] list, double[] list_1, List<double> l)
         {
+            double[] l1 = new double[l.Count];
+            l.CopyTo(l1);
+            int[] ind = new int[list_1.Length];
+            for (int i = 0; i < list.Length; i++)
+            {
+                ind[i] = Array.IndexOf(list_1, list[i]);
+            }
+            for (int i = 0; i < list_1.Length; i++)
+                l[ind[i]] = l1[i]; 
+        }
+        public System.Collections.Generic.IEnumerable<double> Code(MainForm.Method mt, double[] list_1, bool is_coef, double coef)
+        {
+            double[] list = new double[list_1.Length];
+            list_1.CopyTo(list, 0);
+            Array.Sort(list);
             List<double> l = new List<double>();
             double Max = list.Max();
             double Min = list.Min();
+            min = Min;
+            max = Max;
             double Interval = Math.Abs((Max - Min) / list.Length);
             double am1;
             switch (mt)
@@ -51,8 +55,9 @@ namespace Курсовая_БД_ООП
                             else
                                 l.Add(l[i] + diapazon * coef);
                         }
+                        ret_sort(list, list_1, l);
                         foreach (double n in l)
-                            yield return n;
+                            yield return Math.Round(n);
                         break;
                     }
                 case MainForm.Method.Move_Down:
@@ -75,8 +80,9 @@ namespace Курсовая_БД_ООП
                             else
                                 l.Add(l[i] + diapazon * coef);
                         }
+                        ret_sort(list, list_1, l);
                         foreach (double n in l)
-                            yield return n;
+                            yield return Math.Round(n);
                         break;
                     }
                 case MainForm.Method.Move_Up:
@@ -99,8 +105,9 @@ namespace Курсовая_БД_ООП
                             else
                                 l.Add(l[i] + diapazon * coef);
                         }
+                        ret_sort(list, list_1, l);
                         foreach (double n in l)
-                            yield return n;
+                            yield return Math.Round(n);
                         break;
                     }
                 case MainForm.Method.Widening:
@@ -123,11 +130,11 @@ namespace Курсовая_БД_ООП
                             else
                                 l.Add(l[i] + diapazon1 * k1);
                         }
+                        ret_sort(list, list_1, l);
                         foreach (double n in l)
-                            yield return n;
+                            yield return Math.Round(n);
                         break;
                     }
-                    
             }
         }
     }

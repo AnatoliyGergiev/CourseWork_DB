@@ -53,6 +53,7 @@
             // 
             // button_Analyze
             // 
+            this.button_Analyze.Enabled = false;
             this.button_Analyze.Location = new System.Drawing.Point(31, 29);
             this.button_Analyze.Name = "button_Analyze";
             this.button_Analyze.Size = new System.Drawing.Size(173, 50);
@@ -63,15 +64,18 @@
             // 
             // button_Sort
             // 
+            this.button_Sort.Enabled = false;
             this.button_Sort.Location = new System.Drawing.Point(31, 85);
             this.button_Sort.Name = "button_Sort";
             this.button_Sort.Size = new System.Drawing.Size(173, 50);
             this.button_Sort.TabIndex = 0;
             this.button_Sort.Text = "Сортировать";
             this.button_Sort.UseVisualStyleBackColor = true;
+            this.button_Sort.Click += new System.EventHandler(this.button_Sort_Click);
             // 
             // button_SetCoef
             // 
+            this.button_SetCoef.Enabled = false;
             this.button_SetCoef.Location = new System.Drawing.Point(31, 141);
             this.button_SetCoef.Name = "button_SetCoef";
             this.button_SetCoef.Size = new System.Drawing.Size(173, 50);
@@ -220,7 +224,7 @@
             this.изФайлаToolStripMenuItem,
             this.изБазыДанныхToolStripMenuItem});
             this.загрузитьToolStripMenuItem.Name = "загрузитьToolStripMenuItem";
-            this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(175, 24);
+            this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(146, 24);
             this.загрузитьToolStripMenuItem.Text = "Загрузить";
             // 
             // изФайлаToolStripMenuItem
@@ -252,7 +256,9 @@
             this.Controls.Add(this.button_Sort);
             this.Controls.Add(this.button_Analyze);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "Шифрование данных";
             this.groupBox1.ResumeLayout(false);

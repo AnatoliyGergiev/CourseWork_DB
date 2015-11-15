@@ -16,6 +16,7 @@ namespace Курсовая_БД_ООП
         public event EventHandler<EventArgs> Download_file;
         public event EventHandler<EventArgs> Update;
         private Coding coding;
+        public bool[] answer = new bool[2];
         public enum Method
         {
             Compress,
@@ -80,7 +81,9 @@ namespace Курсовая_БД_ООП
             if (textBox1.Text != "")
             {
                 is_coef = true;
-                dn = Convert.ToDouble(textBox1.Text);
+                string str = textBox1.Text;
+                str = str.Replace('.',',');
+                dn = Convert.ToDouble(str);
             }
             if (radioButton_Compress.Checked == true)
             {
@@ -90,12 +93,11 @@ namespace Курсовая_БД_ООП
                     L_Encoded[i] = d;
                     i++;
                 }
-                List_Encoded = L_Encoded;
             }
             if (radioButton_MoveUp.Checked == true)
             {
                 int i = 0;
-                foreach (double d in coding.Code(Method.Move_Up, L_Start, is_coef, Convert.ToDouble(textBox1.Text)))
+                foreach (double d in coding.Code(Method.Move_Up, L_Start, is_coef, dn))
                 {
                     L_Encoded[i] = d;
                     i++;
@@ -104,7 +106,7 @@ namespace Курсовая_БД_ООП
             if (radioButton_MoveDown.Checked == true)
             {
                 int i = 0;
-                foreach (double d in coding.Code(Method.Move_Down, L_Start, is_coef, Convert.ToDouble(textBox1.Text)))
+                foreach (double d in coding.Code(Method.Move_Down, L_Start, is_coef, dn))
                 {
                     L_Encoded[i] = d;
                     i++;
@@ -113,12 +115,13 @@ namespace Курсовая_БД_ООП
             if (radioButton_Widening.Checked == true)
             {
                 int i = 0;
-                foreach (double d in coding.Code(Method.Widening, L_Start, is_coef, Convert.ToDouble(textBox1.Text)))
+                foreach (double d in coding.Code(Method.Widening, L_Start, is_coef, dn))
                 {
                     L_Encoded[i] = d;
                     i++;
                 }
             }
+            List_Encoded = L_Encoded;
             if (Update != null)
                 Update(this, EventArgs.Empty);
         }
@@ -126,10 +129,34 @@ namespace Курсовая_БД_ООП
         //Анализировать
         private void button1_Click(object sender, EventArgs e)
         {
-            button_Code.Enabled = true;
-            radioButton_Compress.Enabled = true;
-            radioButton_MoveDown.Enabled = true;
+            double Min = L_Start.Min();
+            double Max = L_Start.Max();
+            double Interval = Math.Abs((Max - Min) / L_Start.Length);
+            Analyze a = new Analyze(answer, (int)(Min-Interval), (int)(Max+Interval));
+            a.ShowDialog();
 
+            button_SetCoef.Enabled = true;
+            button_Code.Enabled = true;
+
+            if (answer[0] && answer[1])
+            {
+                radioButton_Compress.Enabled = true;
+                radioButton_MoveDown.Enabled = true;
+                radioButton_MoveUp.Enabled = true;
+                radioButton_Widening.Enabled = true;
+            }
+            if(answer[0] && !answer[1])
+            {
+                radioButton_Compress.Enabled = true;
+                radioButton_MoveDown.Enabled = true;
+            }
+            if(!answer[0] && answer[1])
+            {
+                radioButton_Compress.Enabled = true;
+                radioButton_MoveUp.Enabled = true;
+            }
+            if (!answer[0] && !answer[1])
+                radioButton_Compress.Enabled = true;
         }
 
         //Проверка на ввод коэффициента кодирования
@@ -143,8 +170,23 @@ namespace Курсовая_БД_ООП
 
         private void изФайлаToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            button_Analyze.Enabled = true;
+            button_Sort.Enabled = true;
             if (Download_file != null)
                 Download_file(this, EventArgs.Empty);
+        }
+
+        private void button_Sort_Click(object sender, EventArgs e)
+        {
+            Array.Sort(L_Start);
+            List_Start = L_Start;
+            if (listBox2.Items.Count != 0)
+            {
+                Array.Sort(L_Encoded);
+                List_Encoded = L_Encoded;
+            }
+            if (Update != null)
+                Update(this, EventArgs.Empty);
         }
     }
 }
