@@ -17,3 +17,15 @@ C:\Users\Анатолий\Documents\GitHub\CourseWork_DB\Курсовая_БД_�
 C:\Users\Анатолий\Documents\GitHub\CourseWork_DB\Курсовая_БД_ООП\Курсовая_БД_ООП\obj\Debug\Курсовая_БД_ООП.Properties.Resources.resources
 C:\Users\Анатолий\Documents\GitHub\CourseWork_DB\Курсовая_БД_ООП\Курсовая_БД_ООП\obj\Debug\Курсовая_БД_ООП.csproj.GenerateResource.Cache
 C:\Users\Анатолий\Documents\GitHub\CourseWork_DB\Курсовая_БД_ООП\Курсовая_БД_ООП\obj\Debug\Курсовая_БД_ООП.Analyze.resources
+C:\Users\HYS\Downloads\CourseWork_DB-master\Курсовая_БД_ООП\Курсовая_БД_ООП\bin\Debug\Курсовая_БД_ООП.exe.config
+C:\Users\HYS\Downloads\CourseWork_DB-master\Курсовая_БД_ООП\Курсовая_БД_ООП\obj\Debug\Курсовая_БД_ООП.exe
+C:\Users\HYS\Downloads\CourseWork_DB-master\Курсовая_БД_ООП\Курсовая_БД_ООП\obj\Debug\Курсовая_БД_ООП.pdb
+C:\Users\HYS\Downloads\CourseWork_DB-master\Курсовая_БД_ООП\Курсовая_БД_ООП\bin\Debug\Курсовая_БД_ООП.exe
+C:\Users\HYS\Downloads\CourseWork_DB-master\Курсовая_БД_ООП\Курсовая_БД_ООП\bin\Debug\Курсовая_БД_ООП.pdb
+C:\Users\HYS\Downloads\CourseWork_DB-master\Курсовая_БД_ООП\Курсовая_БД_ООП\obj\Debug\Курсовая_БД_ООП.csprojResolveAssemblyReference.cache
+C:\Users\HYS\Downloads\CourseWork_DB-master\Курсовая_БД_ООП\Курсовая_БД_ООП\obj\Debug\Курсовая_БД_ООП.Analyze.resources
+C:\Users\HYS\Downloads\CourseWork_DB-master\Курсовая_БД_ООП\Курсовая_БД_ООП\obj\Debug\Курсовая_БД_ООП.MainForm.resources
+C:\Users\HYS\Downloads\CourseWork_DB-master\Курсовая_БД_ООП\Курсовая_БД_ООП\obj\Debug\Курсовая_БД_ООП.Properties.Resources.resources
+C:\Users\HYS\Downloads\CourseWork_DB-master\Курсовая_БД_ООП\Курсовая_БД_ООП\obj\Debug\Курсовая_БД_ООП.csproj.GenerateResource.Cache
+C:\Users\HYS\Downloads\CourseWork_DB-master\Курсовая_БД_ООП\Курсовая_БД_ООП\obj\Debug\Курсовая_БД_ООП.Forms.DataBaseSelection.resources
+C:\Users\HYS\Downloads\CourseWork_DB-master\Курсовая_БД_ООП\Курсовая_БД_ООП\obj\Debug\Курсовая_БД_ООП.Forms.Authorization.resources

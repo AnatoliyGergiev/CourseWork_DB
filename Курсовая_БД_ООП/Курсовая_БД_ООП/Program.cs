@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Курсовая_БД_ООП.Forms;
 
 namespace Курсовая_БД_ООП
 {
@@ -16,7 +17,7 @@ namespace Курсовая_БД_ООП
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new Authorization());
         }
     }
 }
