@@ -44,30 +44,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Analyze.cs">
+    <Compile Include="Forms\Analyze.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Analyze.Designer.cs">
+    <Compile Include="Forms\Analyze.Designer.cs">
       <DependentUpon>Analyze.cs</DependentUpon>
     </Compile>
-    <Compile Include="Coding.cs" />
-    <Compile Include="FileDownloader.cs" />
-    <Compile Include="IDownloader.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="Forms\Authorization.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Forms\Authorization.Designer.cs">
+      <DependentUpon>Authorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DataBaseSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DataBaseSelection.Designer.cs">
+      <DependentUpon>DataBaseSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Coding.cs" />
+    <Compile Include="Helpers\FileDownloader.cs" />
+    <Compile Include="Interfaces\IDownloader.cs" />
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="IMainForm.cs" />
-    <Compile Include="MainPresenter.cs" />
-    <Compile Include="Model.cs" />
+    <Compile Include="Interfaces\IMainForm.cs" />
+    <Compile Include="Presenters\MainPresenter.cs" />
+    <Compile Include="Models\Model.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Analyze.resx">
+    <EmbeddedResource Include="Forms\Analyze.resx">
       <DependentUpon>Analyze.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Forms\Authorization.resx">
+      <DependentUpon>Authorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DataBaseSelection.resx">
+      <DependentUpon>DataBaseSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -91,6 +109,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
